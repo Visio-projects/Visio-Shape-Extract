@@ -10,7 +10,6 @@ This is an Excel 2010 VSTO Addin written in Visual Studio 2013 VB.Net. It allows
 |:-------------------------------|:--------------------------|
 |Visual Basic for Applications|Code|
 |[Extensible Markup Language (XML)](https://www.rondebruin.nl/win/s2/win001.htm)|Ribbon|
-|[Remote Desktop Manager](https://www.microsoft.com/en-au/download/details.aspx?id=44989)|Export File|
 
 ## Functionality
 This Visio ribbon named “Shape Extract” is inserted after the “Home” tab when Visio opens.  Listed below is the detailed functionality of this application and its components.  
