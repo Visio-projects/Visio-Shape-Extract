@@ -8,8 +8,8 @@ This is an Excel 2010 VSTO Addin written in Visual Studio 2013 VB.Net. It allows
 ## Dependencies
 |Software                        |Dependency                 |
 |:-------------------------------|:--------------------------|
-|Visual Basic for Applications|Code|
-|[Extensible Markup Language (XML)](https://www.rondebruin.nl/win/s2/win001.htm)|Ribbon|
+|[Microsoft Visual Studio 2013](https://www.visualstudio.com/en-us/news/releasenotes/vs2013-update4-rtm-vs)|Solution|
+|[Microsoft Visio 2010](https://www.microsoft.com/en-au/software-download/office)|Project|
 
 ## Functionality
 This Visio ribbon named “Shape Extract” is inserted after the “Home” tab when Visio opens.  Listed below is the detailed functionality of this application and its components.  
