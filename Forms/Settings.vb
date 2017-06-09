@@ -3,7 +3,7 @@ Option Explicit On
 
 Imports System.Windows.Forms
 Imports System.Reflection
-Imports ShapeExtract.Code
+Imports ShapeExtract.Scripts
 
 Namespace Forms
 
@@ -33,7 +33,7 @@ Namespace Forms
                 'pgdSettings.BrowsableAttributes = attrs
 
             Catch ex As Exception
-                Call ErrorMsg(ex)
+                Call DisplayErrorMessage(ex)
                 Exit Try
 
             End Try
@@ -51,7 +51,7 @@ Namespace Forms
                 My.Settings.Save()
 
             Catch ex As Exception
-                Call ErrorMsg(ex)
+                Call DisplayErrorMessage(ex)
                 Exit Try
 
             End Try
@@ -87,7 +87,7 @@ Namespace Forms
                 mi.Invoke(view, New Object() {width})
 
             Catch ex As Exception
-                Call ErrorMsg(ex)
+                Call DisplayErrorMessage(ex)
                 Exit Try
 
             End Try

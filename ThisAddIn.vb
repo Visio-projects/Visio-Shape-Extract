@@ -1,4 +1,4 @@
-﻿Imports ShapeExtract.Code
+﻿Imports ShapeExtract.Scripts
 
 Public Class ThisAddIn
 
