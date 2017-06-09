@@ -17,7 +17,7 @@ This Visio ribbon named “Shape Extract” is inserted after the “Home” tab
 ### Export Data (Group)
 
 ####	Export Shapes (Button)
-* Exports all the values from each shape to a .csv file
+* Exports all the attribute values from each shape to a .csv file
 
 ####	Open Folder (Button)
 * Opens the export folder
@@ -30,8 +30,8 @@ This Visio ribbon named “Shape Extract” is inserted after the “Home” tab
 ####	Settings (Button)
 * Opens the settings form.
 
-####	Visual Basic (Button)
-* Opens the Visual Basic editor.
+####	COM Add-Ins (Button)
+* Opens the COM Add-Ins form to manage the available addins
 
 ###	About (Group)
 
