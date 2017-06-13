@@ -8,7 +8,7 @@ This is a Visio 2010 VSTO Addin written in Visual Studio 2013 VB.Net. It allows 
 ## Dependencies
 |Software                        |Dependency                 |
 |:-------------------------------|:--------------------------|
-|[Microsoft Visual Studio 2013](https://www.visualstudio.com/en-us/news/releasenotes/vs2013-update4-rtm-vs)|Solution|
+|[Microsoft Visual Studio Community 2017](https://www.visualstudio.com/vs/whatsnew/)|Solution|
 |[Microsoft Visio 2010](https://www.microsoft.com/en-au/software-download/office)|Project|
 
 ## Functionality
