@@ -14,5 +14,3 @@ C:\Temp\ShapeExtract\obj\Debug\ShapeExtract.vbproj.GenerateResource.Cache
 C:\Temp\ShapeExtract\obj\Debug\ShapeExtract.dll
 C:\Temp\ShapeExtract\obj\Debug\ShapeExtract.xml
 C:\Temp\ShapeExtract\obj\Debug\ShapeExtract.pdb
-C:\Temp\ShapeExtract\bin\Debug\ShapeExtract.dll.CodeAnalysisLog.xml
-C:\Temp\ShapeExtract\bin\Debug\ShapeExtract.dll.lastcodeanalysissucceeded
