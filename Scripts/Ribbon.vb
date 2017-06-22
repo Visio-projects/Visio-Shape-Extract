@@ -16,7 +16,7 @@ Namespace Scripts
         Implements Office.IRibbonExtensibility
         Private ribbon As Office.IRibbonUI
 
-#Region "| IRibbonExtensibility Members |"
+#Region "| Ribbon Events |"
 
         Public Sub New()
         End Sub
@@ -30,16 +30,12 @@ Namespace Scripts
         Public Function GetCustomUI(ByVal ribbonID As String) As String Implements Office.IRibbonExtensibility.GetCustomUI
             Return GetResourceText("ShapeExtract.Ribbon.xml")
         End Function
-
-#End Region
-
-#Region "| Helpers |"
-
+		
         ''' <summary>
-        ''' 
+        ''' Get resource text
         ''' </summary>
         ''' <param name="resourceName"></param>
-        ''' <returns></returns>
+        ''' <returns>string</returns>
         ''' <remarks></remarks>
         Private Shared Function GetResourceText(ByVal resourceName As String) As String
             Dim asm As Reflection.Assembly = Reflection.Assembly.GetExecutingAssembly()
@@ -55,10 +51,6 @@ Namespace Scripts
             Next
             Return Nothing
         End Function
-
-#End Region
-
-#Region "| Ribbon Events |"
 
         ''' <summary>
         ''' Load the ribbon
@@ -166,8 +158,8 @@ Namespace Scripts
         Public Sub BtnExtractShapes(ByVal control As Office.IRibbonControl)
             Try
                 If Globals.ThisAddIn.Application.ActiveDocument IsNot Nothing Then
-                    Dim strPath As String = My.Settings.ExportLocation & "\" & Globals.ThisAddIn.Application.ActiveDocument.Name.ToString & "_exported_" & System.DateTime.Now().ToString("yyyyMMdd_hhmmss") & ".csv"
-                    Call ExportShapeValues(strPath)
+                    Dim filePath As String = My.Settings.ExportLocation & "\" & Globals.ThisAddIn.Application.ActiveDocument.Name.ToString & "_exported_" & System.DateTime.Now().ToString("yyyyMMdd_hhmmss") & ".csv"
+                    Call ExportShapeValues(filePath)
                 End If
 
             Catch ex As Exception
@@ -253,38 +245,38 @@ Namespace Scripts
         ''' Export attribute values from Visio shapes
         ''' Example: Call ExportShapeValues("C:\Temp\YourFileNameHere_ExportEntityAttributes.txt")
         ''' </summary>
-        ''' <param name="pstrFileName">The selected file name</param>
+        ''' <param name="fileName">The selected file name</param>
         ''' <returns>Has there been an error during the export?</returns>
         ''' <remarks></remarks>
-        Public Function ExportShapeValues(ByVal pstrFileName As String) As Boolean
-            Dim outFile As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(pstrFileName, False, System.Text.Encoding.Default)
+        Public Function ExportShapeValues(ByVal fileName As String) As Boolean
+            Dim outFile As StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(fileName, False, System.Text.Encoding.Default)
             Try
-                Dim shpObj As Visio.Shape
-                Dim celObj As Visio.Cell
+                Dim shape As Visio.Shape
+                Dim cell As Visio.Cell
                 Dim nRows As Short = 0
                 Dim i As Short = 0
                 Dim shpNo As Integer = 0
-                Dim strPromptName As String = String.Empty
-                Dim strCellName As String = String.Empty
-                Dim strCellValue As String = String.Empty
-                Dim strWrite As String = String.Empty
+                Dim promptName As String = String.Empty
+                Dim cellName As String = String.Empty
+                Dim cellValue As String = String.Empty
+                Dim line As String = String.Empty
 
                 outFile.WriteLine("Shape Type, Shape ID, Shape Name, Cell Name, Prompt Name, Cell Value, Label Text")
                 For shpNo = 1 To Globals.ThisAddIn.Application.ActivePage.Shapes.Count
-                    shpObj = Globals.ThisAddIn.Application.ActivePage.Shapes(shpNo)
-                    nRows = shpObj.RowCount(CShort(Visio.VisSectionIndices.visSectionProp))
+                    shape = Globals.ThisAddIn.Application.ActivePage.Shapes(shpNo)
+                    nRows = shape.RowCount(CShort(Visio.VisSectionIndices.visSectionProp))
                     For i = 0 To CShort(nRows - 1)
-                        celObj = shpObj.CellsSRC(CShort(Visio.VisSectionIndices.visSectionProp), i, 0)
-                        strCellValue = celObj.ResultStr(Visio.VisSectionIndices.visSectionNone)
-                        celObj = shpObj.CellsSRC(CShort(Visio.VisSectionIndices.visSectionProp), i, 1)
-                        strPromptName = celObj.ResultStr(Visio.VisSectionIndices.visSectionNone)
-                        celObj = shpObj.CellsSRC(CShort(Visio.VisSectionIndices.visSectionProp), i, 2)
-                        strCellName = celObj.ResultStr(Visio.VisSectionIndices.visSectionNone)
-                        strWrite = RemoveString(shpObj.Name.ToString, ".") & ", " & ValidateString(shpObj.ID.ToString) & ", " & ValidateString(shpObj.Name.ToString) & ", " & ValidateString(strCellName) & ", " & ValidateString(strPromptName) & ", " & ValidateString(strCellValue) & ", " & ValidateString(shpObj.Text.ToString)
-                        outFile.WriteLine(strWrite)
+                        cell = shape.CellsSRC(CShort(Visio.VisSectionIndices.visSectionProp), i, 0)
+                        cellValue = cell.ResultStr(Visio.VisSectionIndices.visSectionNone)
+                        cell = shape.CellsSRC(CShort(Visio.VisSectionIndices.visSectionProp), i, 1)
+                        promptName = cell.ResultStr(Visio.VisSectionIndices.visSectionNone)
+                        cell = shape.CellsSRC(CShort(Visio.VisSectionIndices.visSectionProp), i, 2)
+                        cellName = cell.ResultStr(Visio.VisSectionIndices.visSectionNone)
+                        line = RemoveString(shape.Name.ToString, ".") & ", " & ValidateString(shape.ID.ToString) & ", " & ValidateString(shape.Name.ToString) & ", " & ValidateString(cellName) & ", " & ValidateString(promptName) & ", " & ValidateString(cellValue) & ", " & ValidateString(shape.Text.ToString)
+                        outFile.WriteLine(line)
                     Next i
                 Next shpNo
-                My.Settings.ExportFile = pstrFileName
+                My.Settings.ExportFile = fileName
                 Return True
 
             Catch ex As Exception
@@ -301,23 +293,23 @@ Namespace Scripts
         ''' <summary>
         ''' Remove any characters that will crash the row
         ''' </summary>
-        ''' <param name="pstrText">The string to validate</param>
+        ''' <param name="text">The string to validate</param>
         ''' <returns>The corrected string</returns>
         ''' <remarks></remarks>
-        Public Function ValidateString(ByVal pstrText As String) As String
+        Public Function ValidateString(ByVal text As String) As String
             Try
-                If String.IsNullOrEmpty(pstrText) Then
-                    pstrText = String.Empty
+                If String.IsNullOrEmpty(text) Then
+                    text = String.Empty
                 Else
-                    pstrText = pstrText.Replace(vbCr, "").Replace(vbLf, "")
-                    pstrText = pstrText.Replace(",", ";")
-                    pstrText = pstrText.Trim
+                    text = text.Replace(vbCr, "").Replace(vbLf, "")
+                    text = text.Replace(",", ";")
+                    text = text.Trim
                 End If
-                Return pstrText
+                Return text
 
             Catch ex As Exception
                 'Call DisplayErrorMessage(ex)
-                Return pstrText
+                Return text
 
             Finally
 
@@ -328,21 +320,21 @@ Namespace Scripts
         ''' <summary>
         ''' Remove any characters that will crash the row
         ''' </summary>
-        ''' <param name="pstrValue">The string to evaluate</param>
-        ''' <param name="strChar">The string to remove</param>
+        ''' <param name="textValue">The string to evaluate</param>
+        ''' <param name="charValue">The string to remove</param>
         ''' <returns>The corrected string</returns>
         ''' <remarks></remarks>
-        Public Function RemoveString(ByVal pstrValue As String, Optional ByVal strChar As String = ".") As String
+        Public Function RemoveString(ByVal textValue As String, Optional ByVal charValue As String = ".") As String
             Try
-                If pstrValue.Contains(strChar) Then
-                    Return pstrValue.Substring(0, pstrValue.IndexOf("."))
+                If textValue.Contains(charValue) Then
+                    Return textValue.Substring(0, textValue.IndexOf("."))
                 Else
-                    Return pstrValue
+                    Return textValue
                 End If
 
             Catch ex As Exception
                 'Call DisplayErrorMessage(ex)
-                Return pstrValue
+                Return textValue
 
             Finally
 
@@ -353,13 +345,13 @@ Namespace Scripts
         ''' <summary>
         ''' open a file from the source list
         ''' </summary>
-        ''' <param name="pstrFile">The selected file to open</param>
+        ''' <param name="fileName">The selected file to open</param>
         ''' <remarks></remarks>
-        Public Sub OpenFile(ByVal pstrFile As String)
+        Public Sub OpenFile(ByVal fileName As String)
             Try
                 Dim pStart As New System.Diagnostics.Process
-                If pstrFile = String.Empty Then Exit Try
-                pStart.StartInfo.FileName = pstrFile
+                If fileName = String.Empty Then Exit Try
+                pStart.StartInfo.FileName = fileName
                 pStart.Start()
                 'MsgBox(pstrFile, vbCritical, "file path")
 
