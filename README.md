@@ -1,7 +1,7 @@
 # Microsoft Visio Shape Extract
 This is a Visio 2010 VSTO Addin written in Visual Studio Community 2017 VB.Net. It allows the user to extract the entity attributes from a Visio file.
 
-<h1 align="center">
+<h1 align="left">
   <img src="Images/toolbar.png" alt="MyToolbar" />
 </h1>
 
