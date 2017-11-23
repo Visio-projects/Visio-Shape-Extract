@@ -7,6 +7,8 @@
 This is a Visio VSTO Addin written in Visual Studio Community 2017 VB.Net. It allows the user to extract the entity attributes from a Visio file.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
+[![star this repo](http://githubbadges.com/star.svg?user=aduguid&repo=MicrosoftVisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftVisioShapeExtract)
+[![fork this repo](http://githubbadges.com/fork.svg?user=aduguid&repo=MicrosoftVisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftVisioShapeExtract/fork)
 
 <h1 align="left">
   <img src="Images/toolbar.png" alt="MyToolbar" />
