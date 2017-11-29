@@ -14,11 +14,17 @@ This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET 
   <img src="Images/ReadMe/vsto.visio.shape.extract.png" alt="MyToolbar" />
 </h1>
 
+<a id="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"> </a>
 ## Dependencies
-|Software                        |Dependency                 |
-|:-------------------------------|:--------------------------|
-|[Microsoft Visual Studio Community 2017](https://www.visualstudio.com/vs/whatsnew/)|Solution|
-|[Microsoft Visio 2010](https://www.microsoft.com/en-au/software-download/office)|Project|
+|Software                                   |Dependency                 |Project                    |
+|:------------------------------------------|:--------------------------|:--------------------------|
+|[Microsoft Visual Studio Community 2017](https://www.visualstudio.com/vs/whatsnew/)|Solution|VSTO|
+|[Microsoft Office Developer Tools](https://blogs.msdn.microsoft.com/visualstudio/2015/11/23/latest-microsoft-office-developer-tools-for-visual-studio-2015/)|Solution|VSTO|
+|[Microsoft Visio 2010 (or later)](https://www.microsoft.com/en-au/software-download/office)|Project|VBA, VSTO|
+|[Visual Basic for Applications](https://msdn.microsoft.com/en-us/vba/vba-language-reference)|Code|VBA|
+|[Extensible Markup Language (XML)](https://www.rondebruin.nl/win/s2/win001.htm)|Ribbon|VBA, VSTO|
+|[Snagit](http://discover.techsmith.com/snagit-non-brand-desktop/?gclid=CNzQiOTO09UCFVoFKgod9EIB3g)|Read Me|VBA, VSTO|
+|Badges ([Library](https://shields.io/), [Custom](https://rozaxe.github.io/factory/), [Star/Fork](http://githubbadges.com))|Read Me|VBA, VSTO|
 
 ## Functionality
 This Visio ribbon named “Shape Extract” is inserted after the “Home” tab when Visio opens.  Listed below is the detailed functionality of this application and its components.  
