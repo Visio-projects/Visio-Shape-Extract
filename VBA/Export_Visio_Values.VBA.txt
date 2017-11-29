@@ -1,0 +1,49 @@
+'---------------------------------------------------------------------
+'Company:
+'Created By:       Anthony L. Duguid
+'Created Date:     11/05/2001  12:30
+'Edited By:        Anthony L. Duguid
+'Edited Date:      08/23/2004  09:50
+'Purpose:          Main procedures
+'---------------------------------------------------------------------
+'Option Explicit
+
+Public Function CustomProp() As Boolean
+Dim shpObj As Visio.Shape, celObj As Visio.Cell
+Dim i As Integer, j As Integer, ShpNo As Integer
+Dim LabelName As String, PromptName As String, ValName As String, Tabchr As String
+
+Open "C:\Data\CustomProp.txt" For Output Shared As #1
+
+Tabchr = Chr(9)
+
+For ShpNo = 1 To Visio.ActivePage.Shapes.Count
+
+Set shpObj = Visio.ActivePage.Shapes(ShpNo)
+nRows = shpObj.RowCount(Visio.visSectionProp)
+For i = 0 To nRows - 1
+Set celObj = shpObj.CellsSRC(Visio.visSectionProp, i, 0)
+ValName = celObj.ResultStr(Visio.visNone)
+Set celObj = shpObj.CellsSRC(Visio.visSectionProp, i, 1)
+PromptName = celObj.ResultStr(Visio.visNone)
+Set celObj = shpObj.CellsSRC(Visio.visSectionProp, i, 2)
+LabelName = celObj.ResultStr(Visio.visNone)
+
+Debug.Print shpObj.Name, LabelName, PromptName, ValName
+Print #1, shpObj.Name; Tabchr; LabelName; Tabchr; PromptName; Tabchr; ValName
+
+Next i
+Next ShpNo
+Close #1
+
+End Function
+
+Public Function DisplayDoc() As Boolean
+' Display the name of the current document and the current page
+End Function
+
+Private Sub Document_DocumentOpened(ByVal doc As IVDocument)
+Debug.Print ActiveDocument.Name
+Debug.Print ActivePage.Name
+Call CustomProp
+End Sub
