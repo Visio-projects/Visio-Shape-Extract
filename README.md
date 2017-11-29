@@ -14,6 +14,24 @@ This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET 
   <img src="Images/ReadMe/vsto.visio.shape.extract.png" alt="MyToolbar" />
 </h1>
 
+## Table of Contents
+- <a href="#dependencies">Dependencies</a>
+- <a href="#glossary-of-terms">Glossary of Terms</a>
+- <a href="#functionality">Functionality</a>
+    - <a href="#actions">Actions</a>
+         - <a href="#export-shapes">Export Shapes</a> 
+         - <a href="#open-folder">Open Folder</a> 
+         - <a href="#open-file">Open File</a> 
+    - <a href="#options-group">Options</a>  
+         - <a href="#settings">Add-In Settings</a> 
+    - <a href="#help">Help</a>
+        - <a href="#how-to">How To...</a>  
+        - <a href="#report-issue">Report Issue</a>  
+    - <a href="#about">About</a>
+        - <a href="#description">Add-in Name</a>
+        - <a href="#install-date">Release Date</a>  
+        - <a href="#copyright">Copyright</a>  
+
 <a id="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"> </a>
 ## Dependencies
 |Software                                   |Dependency                 |Project                    |
