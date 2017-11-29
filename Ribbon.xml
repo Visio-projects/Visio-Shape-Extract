@@ -61,7 +61,7 @@
 							imageMso="Help"
 							size="large"
 							screentip="How To..."
-							supertip="This opens the read me page in GitHub with detailed instructions of the Add-In functionality."
+							supertip="This opens the read me page with detailed instructions of the Add-In functionality."
 							/>
 					<button
 							id="btnOpenNewIssue"
@@ -70,7 +70,7 @@
 							imageMso="MacroSecurity"
 							size="large"
 							screentip="Report An Issue"
-							supertip="This will open a new issue page in GitHub. The user will need to login to raise an issue."
+							supertip="This will open a new issue page. The user will need to login to raise an issue."
 							/>
 				</group>
 				<group
