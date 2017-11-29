@@ -34,21 +34,81 @@ This Visio ribbon named “Shape Extract” is inserted after the “Home” tab
 #### Open File (Button)
 * Open the export file
 
+<a id="user-content-options" class="anchor" href="#options" aria-hidden="true"> </a>
 ###	Options (Group)
 
-####	Settings (Button)
-* Opens the settings form.
+#### Add-In Settings (Button)
 
-####	COM Add-Ins (Button)
-* Opens the COM Add-Ins form to manage the available addins
+<kbd>
+VSTO
+<br>
+  <img align="left" src="Images/ReadMe/vsto.ribbon.settings.png" />
+</kbd>
 
+- Types of VSTO Settings
+  - Application Settings
+    - These settings can only be changed in the project and need to be redeployed
+    - They will appear disabled in the form
+  - User Settings
+    - These settings can be changed by the end-user
+    - They will appear enabled in the form
+    
+<kbd>
+VBA
+<br>
+  <img align="left" src="Images/ReadMe/vba.settings.form.png" />
+</kbd>
+
+- VBA Settings
+  - To add a new setting
+    ```vbnet
+    ThisWorkbook.CustomDocumentProperties.Add _
+    Name:="App_ReleaseDate" _
+    , LinkToContent:=False _
+    , Type:=msoPropertyTypeDate _
+    , Value:="31-Jul-2017 1:05pm"
+    ```
+  - To update a setting
+    ```vbnet
+    ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Value = "31-Jul-2017 1:05pm"
+    ```
+  - To delete a setting
+    ```vbnet
+    ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Delete
+    ```
+<a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
+###	Help (Group)
+<h1 align="left">
+  <img src="Images/ReadMe/ribbon.group.help.png" alt="help" />
+</h1>
+
+<a id="user-content-how-to" class="anchor" href="#how-to" aria-hidden="true"> </a>
+####	How To... (Button)
+* Opens the how to guide in a browser
+
+<a id="user-content-report-issue" class="anchor" href="#report-issue" aria-hidden="true"> </a>
+####	Report Issue (Button)
+* Opens the new issue page in a browser
+
+<a id="user-content-new-version" class="anchor" href="#new-version" aria-hidden="true"> </a>
+####	New Version Is Available (Button)
+* This button is visible if the version of the Add-In is different from the one in the Read Me page. It will download a new version from the site when pressed.
+
+<a id="user-content-about" class="anchor" href="#about" aria-hidden="true"> </a>
 ###	About (Group)
 
-#### Description (Label)
+<h1 align="left">
+  <img src="Images/ReadMe/ribbon.group.about.png" alt="about" />
+</h1>
+
+<a id="user-content-description" class="anchor" href="#description" aria-hidden="true"> </a>
+#### Add-in Name (Label)
 * The application name with the version
 
-#### Install Date (Label)
-* The install date of the application
+<a id="user-content-release-date" class="anchor" href="#release-date" aria-hidden="true"> </a>
+#### Release Date (Label)
+* The release date of the application
 
+<a id="user-content-copyright" class="anchor" href="#copyright" aria-hidden="true"> </a>
 #### Copyright (Label)
 * The author’s name
