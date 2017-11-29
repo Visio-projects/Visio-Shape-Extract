@@ -11,7 +11,7 @@ This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET 
 [![fork this repo](http://githubbadges.com/fork.svg?user=aduguid&repo=MicrosoftVisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftVisioShapeExtract/fork)
 --->
 <h1 align="left">
-  <img src="Images/toolbar.png" alt="MyToolbar" />
+  <img src="Images/ReadMe/vsto.visio.shape.extract.png" alt="MyToolbar" />
 </h1>
 
 ## Dependencies
