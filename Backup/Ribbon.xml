@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab 
+				id="tabShapeExtract"
+				getLabel="GetLabelText"
+				insertAfterMso="TabHome"
+				>
+				<group 
+					label="Export Data" 
+					id="grpData">
+					<button 
+						label="Export Shapes" 
+						id="btnExtractShapes" 
+						getImage="GetButtonImage" 
+						onAction="btnExtractShapes" 
+						size="large" 
+						screentip="Exports all the values from each shape to a csv file"/>
+					<button 
+						label="Open Folder" 
+						id="btnOpenFolder" 
+						getImage="GetButtonImage" 
+						onAction="btnOpenFolder" 
+						size="large" 
+						screentip="Open the export folder"/>
+					<button 
+						label="Open File" 
+						id="btnOpenFile" 
+						getImage="GetButtonImage" 
+						onAction="btnOpenFile" 
+						size="large" 
+						screentip="Open the last extracted file"/>
+				</group>
+				<group 
+					label="Options" 
+					id="grpOptions">
+					<button 
+						label="Settings" 
+						id="btnSettings" 
+						getImage="GetButtonImage" 
+						onAction="btnSettings" 
+						size="large" 
+						screentip="The settings for this Addin"/>
+					<button 
+						getVisible="GetVisible" 
+						idMso="ComAddInsDialog" 
+						size="large"/>
+				</group>
+				<group
+					id="grpAbout"
+					label="About"
+					getImage="GetButtonImage">
+					<labelControl
+						id="lblDescription"
+						label="Description: "
+					/>
+					<labelControl
+						id="lblInstallDate"
+						label="Install Date: "
+					/>
+					<labelControl
+						id="lblCopyright"
+						label="Copyright: "
+					/>
+					<separator
+						id="separator4"
+					/>
+					<labelControl
+						id="txtDescription"
+						getLabel="GetLabelText"
+					/>
+					<labelControl
+						id="txtInstallDate"
+						getLabel="GetLabelText"
+					/>
+					<labelControl
+						id="txtCopyright"
+						getLabel="GetLabelText"
+					/>
+				</group>
+
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

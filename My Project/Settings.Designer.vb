@@ -14,7 +14,7 @@ Option Explicit On
 
 
 <Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
- Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0"),  _
+ Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0"),  _
  Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
 Partial Friend NotInheritable Class MySettings
     Inherits Global.System.Configuration.ApplicationSettingsBase
@@ -56,45 +56,69 @@ Partial Friend NotInheritable Class MySettings
     <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("Anthony Duguid")>  _
-    Public ReadOnly Property Author() As String
+    Public ReadOnly Property App_Author() As String
         Get
-            Return CType(Me("Author"),String)
+            Return CType(Me("App_Author"),String)
         End Get
     End Property
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("C:\Temp")>  _
-    Public Property ExportLocation() As String
+    Public Property App_PathExportLocation() As String
         Get
-            Return CType(Me("ExportLocation"),String)
+            Return CType(Me("App_PathExportLocation"),String)
         End Get
         Set
-            Me("ExportLocation") = value
+            Me("App_PathExportLocation") = value
         End Set
     End Property
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("")>  _
-    Public Property ExportFile() As String
+    Public Property App_FileExport() As String
         Get
-            Return CType(Me("ExportFile"),String)
+            Return CType(Me("App_FileExport"),String)
         End Get
         Set
-            Me("ExportFile") = value
+            Me("App_FileExport") = value
         End Set
     End Property
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
-    Public Property Visible_ComAddInsDialog() As Boolean
+     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftVisioShapeExtract/blob/master/README.md")>  _
+    Public Property App_PathReadMe() As String
         Get
-            Return CType(Me("Visible_ComAddInsDialog"),Boolean)
+            Return CType(Me("App_PathReadMe"),String)
         End Get
         Set
-            Me("Visible_ComAddInsDialog") = value
+            Me("App_PathReadMe") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("https://github.com/aduguid/MicrosoftVisioShapeExtract/issues/new")>  _
+    Public Property App_PathReportIssue() As String
+        Get
+            Return CType(Me("App_PathReportIssue"),String)
+        End Get
+        Set
+            Me("App_PathReportIssue") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("07/31/2017 13:05:00")>  _
+    Public Property App_ReleaseDate() As Date
+        Get
+            Return CType(Me("App_ReleaseDate"),Date)
+        End Get
+        Set
+            Me("App_ReleaseDate") = value
         End Set
     End Property
 End Class

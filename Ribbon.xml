@@ -8,76 +8,105 @@
 				insertAfterMso="TabHome"
 				>
 				<group 
-					label="Export Data" 
-					id="grpData">
+					label="Actions" 
+					id="grpData"
+					imageMso="OrgChartDataExport">
 					<button 
 						label="Export Shapes" 
-						id="btnExtractShapes" 
-						getImage="GetButtonImage" 
-						onAction="btnExtractShapes" 
-						size="large" 
-						screentip="Exports all the values from each shape to a csv file"/>
+						id="btnExtractShapes"
+						imageMso="OrgChartDataExport"
+						onAction="OnAction" 
+						size="large"
+						screentip="Export Shapes"
+						supertip="Exports all the values from each shape to a csv file"/>
 					<button 
 						label="Open Folder" 
-						id="btnOpenFolder" 
-						getImage="GetButtonImage" 
-						onAction="btnOpenFolder" 
-						size="large" 
-						screentip="Open the export folder"/>
+						id="btnOpenFolder"
+						imageMso="FileOpenUsingBackstage"
+						onAction="OnAction" 
+						size="large"
+						screentip="Open Folder"
+						supertip="Open the export folder"/>
 					<button 
 						label="Open File" 
-						id="btnOpenFile" 
-						getImage="GetButtonImage" 
-						onAction="btnOpenFile" 
+						id="btnOpenFile"
+						imageMso="CreateNewDrawing"
+						onAction="OnAction" 
 						size="large" 
-						screentip="Open the last extracted file"/>
-				</group>
-				<group 
-					label="Options" 
-					id="grpOptions">
-					<button 
-						label="Settings" 
-						id="btnSettings" 
-						getImage="GetButtonImage" 
-						onAction="btnSettings" 
-						size="large" 
-						screentip="The settings for this Addin"/>
-					<button 
-						getVisible="GetVisible" 
-						idMso="ComAddInsDialog" 
-						size="large"/>
+						screentip="Open File"
+						supertip="Open the last extracted file"/>
 				</group>
 				<group
-					id="grpAbout"
-					label="About"
-					getImage="GetButtonImage">
+						id="grpOptions"
+						label="Options"
+						imageMso="PropertySheet">
+					<button
+							id="btnSettings"
+							label="Add-In Settings"
+							onAction="OnAction"
+							imageMso="PropertySheet"
+							size="large"
+							screentip="Add-In Settings Form"
+							supertip="This opens a user form with a list of custom properties stored in the file."
+							/>
+				</group>
+				<group
+						id="grpHelp"
+						label="Help"
+						imageMso="Help">
+					<button
+							id="btnOpenReadMe"
+							label="How To...   "
+							onAction="OnAction"
+							imageMso="Help"
+							size="large"
+							screentip="How To..."
+							supertip="This opens the read me page in GitHub with detailed instructions of the Add-In functionality."
+							/>
+					<button
+							id="btnOpenNewIssue"
+							label="Report Issue"
+							onAction="OnAction"
+							imageMso="MacroSecurity"
+							size="large"
+							screentip="Report An Issue"
+							supertip="This will open a new issue page in GitHub. The user will need to login to raise an issue."
+							/>
+				</group>
+				<group
+						id="grpAbout"
+						label="About"
+						imageMso="Info">
 					<labelControl
-						id="lblDescription"
-						label="Description: "
-					/>
+							id="lblDescription"
+							label="Add-In Name: "
+							getEnabled="False"
+							/>
 					<labelControl
-						id="lblInstallDate"
-						label="Install Date: "
-					/>
+							id="lblReleaseDate"
+							label="Release Date: "
+							getEnabled="False"
+							/>
 					<labelControl
-						id="lblCopyright"
-						label="Copyright: "
-					/>
-					<separator
-						id="separator4"
-					/>
+							id="lblCopyright"
+							label="Copyright: "
+							getEnabled="False"
+							/>
 					<labelControl
-						id="txtDescription"
-						getLabel="GetLabelText"
-					/>
+							id="txtDescription"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
 					<labelControl
-						id="txtInstallDate"
-						getLabel="GetLabelText"
-					/>
+							id="txtReleaseDate"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
 					<labelControl
-						id="txtCopyright"
-						getLabel="GetLabelText"
-					/>
+							id="txtCopyright"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
 				</group>
 
 			</tab>
