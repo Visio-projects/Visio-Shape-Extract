@@ -1,4 +1,4 @@
-<img align="left" src="Resources/VisioAddin.png" width="64px" >
+<img align="left" src="/VB/Resources/VisioAddin.png" width="64px" >
 
 # Microsoft Visio Shape Extract
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
