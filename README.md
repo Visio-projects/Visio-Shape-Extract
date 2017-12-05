@@ -14,23 +14,18 @@ This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET 
   <img src="Images/ReadMe/vsto.visio.shape.extract.png" alt="MyToolbar" />
 </h1>
 
+<br>
+
 ## Table of Contents
 - <a href="#dependencies">Dependencies</a>
 - <a href="#glossary-of-terms">Glossary of Terms</a>
 - <a href="#functionality">Functionality</a>
     - <a href="#actions">Actions</a>
-         - <a href="#export-shapes">Export Shapes</a> 
-         - <a href="#open-folder">Open Folder</a> 
-         - <a href="#open-file">Open File</a> 
     - <a href="#options-group">Options</a>  
-         - <a href="#settings">Add-In Settings</a> 
     - <a href="#help">Help</a>
-        - <a href="#how-to">How To...</a>  
-        - <a href="#report-issue">Report Issue</a>  
     - <a href="#about">About</a>
-        - <a href="#description">Add-in Name</a>
-        - <a href="#install-date">Release Date</a>  
-        - <a href="#copyright">Copyright</a>  
+
+<br>
 
 <a id="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"> </a>
 ## Dependencies
@@ -44,6 +39,8 @@ This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET 
 |[Snagit](http://discover.techsmith.com/snagit-non-brand-desktop/?gclid=CNzQiOTO09UCFVoFKgod9EIB3g)|Read Me|VBA, VSTO|
 |Badges ([Library](https://shields.io/), [Custom](https://rozaxe.github.io/factory/), [Star/Fork](http://githubbadges.com))|Read Me|VBA, VSTO|
 
+<br>
+
 <a id="user-content-glossary-of-terms" class="anchor" href="#glossary-of-terms" aria-hidden="true"> </a>
 ## Glossary of Terms
 
@@ -54,10 +51,13 @@ This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET 
 | VSTO |Visual Studio Tools for Office (VSTO) is a set of development tools available in the form of a Visual Studio add-in (project templates) and a runtime that allows Microsoft Office 2003 and later versions of Office applications to host the .NET Framework Common Language Runtime (CLR) to expose their functionality via .NET.|
 | XML|Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable.The design goals of XML emphasize simplicity, generality, and usability across the Internet. It is a textual data format with strong support via Unicode for different human languages. Although the design of XML focuses on documents, the language is widely used for the representation of arbitrary data structures such as those used in web services.|
 
+<br>
+
 ## Functionality
 This Visio ribbon named “Shape Extract” is inserted after the “Home” tab when Visio opens.  Listed below is the detailed functionality of this application and its components.  
 
-### Export Data (Group)
+<a id="user-content-actions" class="anchor" href="#actions" aria-hidden="true"> </a>
+### Actions (Group)
 
 ####	Export Shapes (Button)
 * Exports all the attribute values from each shape to a .csv file
