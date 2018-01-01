@@ -1,6 +1,8 @@
 <img align="left" src="/VB/Resources/VisioAddin.png" width="64px" >
 
 # Microsoft Visio Shape Extract
+
+[![Join the chat at https://gitter.im/MicrosoftVisioShapeExtract/Lobby](https://badges.gitter.im/MicrosoftVisioShapeExtract/Lobby.svg)](https://gitter.im/MicrosoftVisioShapeExtract/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © 2017 Anthony Duguid")
 [![release](http://github-release-version.herokuapp.com/github/aduguid/MicrosoftVisioShapeExtract/release.svg?style=flat)](https://github.com/aduguid/MicrosoftVisioShapeExtract/releases/latest)
 
