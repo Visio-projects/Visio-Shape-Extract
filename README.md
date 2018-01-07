@@ -4,13 +4,13 @@
 
 [![Join the chat at https://gitter.im/MicrosoftVisioShapeExtract/Lobby](https://badges.gitter.im/MicrosoftVisioShapeExtract/Lobby.svg)](https://gitter.im/MicrosoftVisioShapeExtract/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
-[![release](http://github-release-version.herokuapp.com/github/aduguid/MicrosoftVisioShapeExtract/release.svg?style=flat)](https://github.com/aduguid/MicrosoftVisioShapeExtract/releases/latest)
+[![release](http://github-release-version.herokuapp.com/github/Office-projects/VisioShapeExtract/release.svg?style=flat)](https://github.com/Office-projects/VisioShapeExtract/releases/latest)
 
 This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET and VBA. It allows the user to extract the entity attributes from a Visio file.
 
 <!---
-[![star this repo](http://githubbadges.com/star.svg?user=aduguid&repo=MicrosoftVisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftVisioShapeExtract)
-[![fork this repo](http://githubbadges.com/fork.svg?user=aduguid&repo=MicrosoftVisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/aduguid/MicrosoftVisioShapeExtract/fork)
+[![star this repo](http://githubbadges.com/star.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract)
+[![fork this repo](http://githubbadges.com/fork.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract/fork)
 --->
 <h1 align="left">
   <img src="Images/ReadMe/vsto.visio.shape.extract.png" alt="MyToolbar" />
@@ -36,16 +36,16 @@ Instructions for installation of VBA and VSTO versions.
 
 ### VBA
 How to install the VBA version
-1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/aduguid/MicrosoftVisioShapeExtract/raw/master/VBA/ShapeExtract.xlam?raw=true "Download the VBA Add-In").
+1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/raw/master/VBA/ShapeExtract.xlam?raw=true "Download the VBA Add-In").
 2. Copy the file to the XLSTART ```%AppData%\Microsoft\Excel\XLSTART\``` folder on your computer.
 3. Close all open instances of Excel and then launch Excel. The new ribbon should appear.
 
 ### VSTO
 How to install the VSTO version
-1. Download AnthonyDuguid.pfx And Install At Root Level [![download Key](https://img.shields.io/badge/download-Key-brightgreen.svg)](https://github.com/aduguid/MicrosoftVisioShapeExtract/VB/blob/master/AnthonyDuguid.pfx?raw=true "Download AnthonyDuguid.pfx And Install At Root Level For VSTO")
+1. Download AnthonyDuguid.pfx And Install At Root Level [![download Key](https://img.shields.io/badge/download-Key-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/VB/blob/master/AnthonyDuguid.pfx?raw=true "Download AnthonyDuguid.pfx And Install At Root Level For VSTO")
 2. Download and run the setup.exe file. ```TODO: publish .NET to GitHub```
 <!---
-[![download VSTO](https://img.shields.io/badge/download-VSTO-brightgreen.svg)](https://github.com/aduguid/MicrosoftVisioShapeExtract/VB/blob/master/publish/setup.exe?raw=true "Download Setup.exe Install File")
+[![download VSTO](https://img.shields.io/badge/download-VSTO-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/VB/blob/master/publish/setup.exe?raw=true "Download Setup.exe Install File")
 --->
 
 <br>
