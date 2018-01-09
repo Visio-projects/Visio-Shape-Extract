@@ -6,6 +6,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
 [![release](http://github-release-version.herokuapp.com/github/Office-projects/VisioShapeExtract/release.svg?style=flat)](https://github.com/Office-projects/VisioShapeExtract/releases/latest)
 
+:new: I'm currently working on the C# version.
+
 This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET and VBA. It allows the user to extract the entity attributes from a Visio file.
 
 <!---
