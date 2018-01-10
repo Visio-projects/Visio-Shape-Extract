@@ -8,7 +8,7 @@
 
 :new: I'm currently working on the C# version.
 
-This is a Visio Add-In written in Microsoft Visual Studio Community 2017 VB.NET and VBA. It allows the user to extract the entity attributes from a Visio file.
+This Add-In allows the user to extract the shape object entity attributes from a Visio file.
 
 <!---
 [![star this repo](http://githubbadges.com/star.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract)
