@@ -8,7 +8,7 @@
 
 :new: I'm currently working on the C# version.
 
-This Add-In allows the user to extract shape objects' attribute tags from a Visio file.
+This Add-In allows the user to extract shape objects' data from a Visio file.
 
 <!---
 [![star this repo](http://githubbadges.com/star.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract)
