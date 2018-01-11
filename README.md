@@ -38,7 +38,7 @@ Instructions for installation of VBA and VSTO versions.
 
 ### VBA
 How to install the VBA version
-1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/raw/master/VBA/ShapeExtract.xlam?raw=true "Download the VBA Add-In").
+1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/raw/master/VBA/ShapeExtract.xlam?raw=true "Download the VBA Add-In"). ```TODO: save VBA to GitHub```
 2. Copy the file to the XLSTART ```%AppData%\Microsoft\Excel\XLSTART\``` folder on your computer.
 3. Close all open instances of Excel and then launch Excel. The new ribbon should appear.
 
