@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab 
+				id="tabShapeExtract"
+				getLabel="GetLabelText"
+				insertAfterMso="TabHome"
+				>
+				<group 
+					label="Actions" 
+					id="grpData"
+					imageMso="OrgChartDataExport">
+					<button 
+						label="Export Shapes" 
+						id="btnExtractShapes"
+						imageMso="OrgChartDataExport"
+						onAction="OnAction" 
+						size="large"
+						screentip="Export Shapes"
+						supertip="Exports all the values from each shape to a csv file"/>
+					<button 
+						label="Open Folder" 
+						id="btnOpenFolder"
+						imageMso="FileOpenUsingBackstage"
+						onAction="OnAction" 
+						size="large"
+						screentip="Open Folder"
+						supertip="Open the export folder"/>
+					<button 
+						label="Open File" 
+						id="btnOpenFile"
+						imageMso="CreateNewDrawing"
+						onAction="OnAction" 
+						size="large" 
+						screentip="Open File"
+						supertip="Open the last extracted file"/>
+				</group>
+				<group
+						id="grpOptions"
+						label="Options"
+						imageMso="PropertySheet">
+					<button
+							id="btnSettings"
+							label="Add-In Settings"
+							onAction="OnAction"
+							imageMso="PropertySheet"
+							size="large"
+							screentip="Add-In Settings Form"
+							supertip="This opens a user form with a list of custom properties stored in the file."
+							/>
+				</group>
+				<group
+						id="grpHelp"
+						label="Help"
+						imageMso="Help">
+					<button
+							id="btnOpenReadMe"
+							label="How To...   "
+							onAction="OnAction"
+							imageMso="Help"
+							size="large"
+							screentip="How To..."
+							supertip="This opens the read me page with detailed instructions of the Add-In functionality."
+							/>
+					<button
+							id="btnOpenNewIssue"
+							label="Report Issue"
+							onAction="OnAction"
+							imageMso="MacroSecurity"
+							size="large"
+							screentip="Report An Issue"
+							supertip="This will open a new issue page. The user will need to login to raise an issue."
+							/>
+				</group>
+				<group
+						id="grpAbout"
+						label="About"
+						imageMso="Info">
+					<labelControl
+							id="lblDescription"
+							label="Add-In Name: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="lblReleaseDate"
+							label="Release Date: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="lblCopyright"
+							label="Copyright: "
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtDescription"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtReleaseDate"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+					<labelControl
+							id="txtCopyright"
+							getLabel="GetLabelText"
+							getEnabled="False"
+							/>
+				</group>
+
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
