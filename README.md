@@ -109,8 +109,6 @@ VSTO
   - User Settings
     - These settings can be changed by the end-user
     - They will appear enabled in the form
-    
-<kbd>
 
 <a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
 ###	Help (Group)
