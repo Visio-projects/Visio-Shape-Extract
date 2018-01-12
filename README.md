@@ -10,6 +10,8 @@
 
 This Add-In allows the user to extract shape objects' data from a Visio file.
 
+VB.NET & VBA versions included
+
 <!---
 [![star this repo](http://githubbadges.com/star.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract)
 [![fork this repo](http://githubbadges.com/fork.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract/fork)
