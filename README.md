@@ -99,7 +99,7 @@ This Visio ribbon named “Shape Extract” is inserted after the “Home” tab
 <kbd>
 VSTO
 <br>
-  <img align="left" src="Images/ReadMe/vsto.ribbon.settings.png"? />
+  <img align="left" src="Images/ReadMe/vsto.ribbon.settings.png" />
 </kbd>
 
 - Types of VSTO Settings
@@ -111,10 +111,6 @@ VSTO
     - They will appear enabled in the form
     
 <kbd>
-VBA
-<br>
-  <img align="left" src="Images/ReadMe/vba.settings.form.png" />
-</kbd>
 
 <a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
 ###	Help (Group)
