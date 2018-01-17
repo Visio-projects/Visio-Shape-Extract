@@ -8,7 +8,7 @@
 
 :new: I'm currently working on the C# version.
 
-This Add-In allows the user to extract shape objects' data from a Visio file.
+This Add-In extracts the shape attributes' text from a Microsoft Visio file.
 
 VB.NET & VBA versions included
 
