@@ -45,7 +45,7 @@ Namespace Scripts
                 My.Settings.App_FileExport = fileName
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
 
             Finally
                 outFile.Close()
@@ -65,7 +65,7 @@ Namespace Scripts
                 Exit Try
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Exit Try
 
             End Try
@@ -88,7 +88,7 @@ Namespace Scripts
                 Scripts.Ribbon.ribbonref.InvalidateRibbon()
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
 
             End Try
 

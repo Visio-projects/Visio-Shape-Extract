@@ -17,7 +17,7 @@ Namespace Scripts
                 currentForm.Icon = Icon.FromHandle(bmp.GetHicon)
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Exit Try
 
             End Try
@@ -55,7 +55,7 @@ Namespace Scripts
                         End If
                     Next
                 Catch ex As Exception
-                    Call ErrorHandler.DisplayMessage(ex)
+                    ErrorHandler.DisplayMessage(ex)
                 End Try
             End If
         End Sub

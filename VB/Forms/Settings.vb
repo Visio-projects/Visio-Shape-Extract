@@ -12,12 +12,12 @@ Namespace Forms
         Private Sub FrmSettingsLoad(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
             Try
                 Me.pgdSettings.SelectedObject = My.Settings
-                Call SetLabelColumnWidth(Me.pgdSettings, 200)
-                Call AssemblyInfo.SetFormIcon(Me, My.Resources.Settings)
+                SetLabelColumnWidth(Me.pgdSettings, 200)
+                AssemblyInfo.SetFormIcon(Me, My.Resources.Settings)
                 Me.Text = "Settings for " & My.Application.Info.Title.ToString.Replace("&", "&&") & Space(1)
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Exit Try
 
             End Try
@@ -29,7 +29,7 @@ Namespace Forms
                 My.Settings.Save()
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Exit Try
 
             End Try
@@ -60,7 +60,7 @@ Namespace Forms
                 mi.Invoke(view, New Object() {width})
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Exit Try
 
             End Try

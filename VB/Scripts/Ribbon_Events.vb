@@ -36,7 +36,7 @@ Namespace Scripts
         Public Sub Ribbon_Load(ByVal ribbonUI As Office.IRibbonUI)
             Me.ribbon = ribbonUI
             ribbonref = Me
-            Call AssemblyInfo.SetAddRemoveProgramsIcon("VisioAddin.ico")
+            AssemblyInfo.SetAddRemoveProgramsIcon("VisioAddin.ico")
         End Sub
 
         Public Function GetLabelText(ByVal control As Office.IRibbonControl) As String
@@ -60,7 +60,7 @@ Namespace Scripts
                 End Select
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
                 Return String.Empty
 
             End Try
@@ -85,7 +85,7 @@ Namespace Scripts
                 End Select
 
             Catch ex As Exception
-                Call ErrorHandler.DisplayMessage(ex)
+                ErrorHandler.DisplayMessage(ex)
 
             End Try
 
