@@ -8,7 +8,9 @@
 
 :new: I'm currently working on the C# version.
 
-This Add-In allows the user to extract shape objects' data from a Visio file.
+This Add-In extracts the shape attributes' text from a Microsoft Visio file.
+
+VB.NET & VBA versions included
 
 <!---
 [![star this repo](http://githubbadges.com/star.svg?user=Office-projects&repo=VisioShapeExtract&style=flat&color=fff&background=007ec6)](http://github.com/Office-projects/VisioShapeExtract)
@@ -38,9 +40,7 @@ Instructions for installation of VBA and VSTO versions.
 
 ### VBA
 How to install the VBA version
-1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/raw/master/VBA/ShapeExtract.xlam?raw=true "Download the VBA Add-In"). ```TODO: save VBA to GitHub```
-2. Copy the file to the XLSTART ```%AppData%\Microsoft\Excel\XLSTART\``` folder on your computer.
-3. Close all open instances of Excel and then launch Excel. The new ribbon should appear.
+1. Download the VBA Add-In file [![download VBA](https://img.shields.io/badge/download-VBA-brightgreen.svg)](https://github.com/Office-projects/VisioShapeExtract/raw/master/VBA/ShapeExtract.vsdm?raw=true "Download the VBA Add-In").
 
 ### VSTO
 How to install the VSTO version
@@ -111,30 +111,7 @@ VSTO
   - User Settings
     - These settings can be changed by the end-user
     - They will appear enabled in the form
-    
-<kbd>
-VBA
-<br>
-  <img align="left" src="Images/ReadMe/vba.settings.form.png" />
-</kbd>
 
-- VBA Settings
-  - To add a new setting
-    ```vbnet
-    ThisWorkbook.CustomDocumentProperties.Add _
-    Name:="App_ReleaseDate" _
-    , LinkToContent:=False _
-    , Type:=msoPropertyTypeDate _
-    , Value:="31-Jul-2017 1:05pm"
-    ```
-  - To update a setting
-    ```vbnet
-    ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Value = "31-Jul-2017 1:05pm"
-    ```
-  - To delete a setting
-    ```vbnet
-    ThisWorkbook.CustomDocumentProperties.Item("App_ReleaseDate").Delete
-    ```
 <a id="user-content-help" class="anchor" href="#help" aria-hidden="true"> </a>
 ###	Help (Group)
 <h1 align="left">
