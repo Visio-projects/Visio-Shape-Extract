@@ -4,7 +4,8 @@
 
 [![Join the chat at https://gitter.im/MicrosoftVisioShapeExtract/Lobby](https://badges.gitter.im/MicrosoftVisioShapeExtract/Lobby.svg)](https://gitter.im/MicrosoftVisioShapeExtract/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
-[![release](http://github-release-version.herokuapp.com/github/Office-projects/VisioShapeExtract/release.svg?style=flat)](https://github.com/Office-projects/VisioShapeExtract/releases/latest)
+[![Latest Release](https://img.shields.io/github/release/Office-projects/Visio-Shape-Extract.svg?label=latest%20release)](https://github.com/Office-projects/Visio-Shape-Extract/releases)
+[![Github commits (since latest release)](https://img.shields.io/github/commits-since/Office-projects/Visio-Shape-Extract/latest.svg)](https://github.com/Office-projects/Visio-Shape-Extract)
 
 :new: I'm currently working on the C# version.
 
