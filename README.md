@@ -1,5 +1,7 @@
 <img align="left" src="Images/ReadMe/header.png">
 
+<br><br>
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/AnthonyDuguid)
 [![Join the chat at https://gitter.im/MicrosoftVisioShapeExtract/Lobby](https://badges.gitter.im/MicrosoftVisioShapeExtract/Lobby.svg)](https://gitter.im/MicrosoftVisioShapeExtract/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE "MIT License Copyright © Anthony Duguid")
